@@ -1,5 +1,5 @@
 #include <vector>
-#include <numeric> // accumulate를 사용하기 위해 포함
+#include <numeric>
 
 using namespace std;
 
