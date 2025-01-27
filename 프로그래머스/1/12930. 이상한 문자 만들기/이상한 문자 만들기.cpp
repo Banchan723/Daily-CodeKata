@@ -5,19 +5,19 @@ using namespace std;
 
 string solution(string s) {
     string answer = "";
-    bool is_even = true;
+    bool iseven = true;
     
     for (int c : s)
     {
         if (c == ' ')
         {
             answer += c;
-            is_even = true;
+            iseven = true;
         }
         else
         {
-            answer += is_even ? toupper(c) : tolower(c);
-            is_even = !is_even;
+            answer += iseven ? toupper(c) : tolower(c);
+            iseven = !iseven;
         }
     }
     return answer;
