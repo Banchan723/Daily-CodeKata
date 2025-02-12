@@ -4,13 +4,15 @@
 using namespace std;
 
 int solution(int n) {
-    int x = 0;
-    for (int x = 1; x < n; x++)
+    int answer = 0;
+    
+    for (int i = 1; i < n; i++)
     {
-        if (n % x == 1)
+        if (n % i == 1)
         {
-            return x;   
+            answer = i;
+            break;
         }
     }
-    return -1;
+    return answer;
 }
