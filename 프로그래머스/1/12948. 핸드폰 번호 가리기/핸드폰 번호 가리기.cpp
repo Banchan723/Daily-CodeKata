@@ -4,14 +4,27 @@
 using namespace std;
 
 string solution(string phone_number) {
-    string answer = "";
+    string answer = phone_number;
+    
+    int count = 0;
+    int count2 = 0;
+    
+    for (int i = 0; i < phone_number.size(); i++)
+{
+    count += 1;
+}
 
-    for (int i = 0; i < phone_number.size() - 4; i++ )
-    {
-        phone_number[i] = '*';
-    }
+for (int i = 0; i < count - 4; i++)
+{
+    answer[i] = '*';
+    count2 += 1;
+}
 
-    answer = phone_number;
-
+for (int i = count2; i < count; i++)
+{
+    answer[i] = phone_number[i];
+}
+    
+    
     return answer;
 }
