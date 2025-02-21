@@ -12,13 +12,13 @@ int solution(vector<int> numbers) {
     
     for (int i = 0; i < 10; i++)
     {
-        if (find_number >= numbers.size() || i != numbers[find_number])
+        if (find_number < numbers.size() && i == numbers[find_number])
         {
-            answer += i;
+            find_number++;
         }
         else
         {
-            find_number++;
+            answer += i;
         }
     }
     return answer;
