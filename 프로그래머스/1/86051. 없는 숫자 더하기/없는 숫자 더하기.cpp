@@ -1,10 +1,25 @@
+#include <string>
 #include <vector>
-#include <numeric>
+#include <algorithm>
 
 using namespace std;
 
 int solution(vector<int> numbers) {
-    int total = 45; // 0부터 9까지의 합
-    int sum_of_numbers = accumulate(numbers.begin(), numbers.end(), 0); // numbers 배열의 합
-    return total - sum_of_numbers;
+    int answer = 0;
+    int find_number = 0;
+    
+    sort(numbers.begin(), numbers.end());
+    
+    for (int i = 0; i < 10; i++)
+    {
+        if (find_number >= numbers.size() || i != numbers[find_number])
+        {
+            answer += i;
+        }
+        else
+        {
+            find_number++;
+        }
+    }
+    return answer;
 }
