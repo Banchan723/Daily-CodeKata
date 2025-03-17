@@ -8,7 +8,8 @@ string solution(vector<int> food) {
 
     answer += "0";
 
-    for (int i = food.size() - 1; i > 0; i--) { 
+    for (int i = food.size() - 1; i > 0; i--) 
+    { 
         int count = food[i] / 2;
 
         string temp = string(count, '0' + i);
