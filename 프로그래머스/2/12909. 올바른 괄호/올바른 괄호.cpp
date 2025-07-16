@@ -42,7 +42,5 @@ bool solution(string s)
         
     }
     
-   
-    
     return answer;
 }
